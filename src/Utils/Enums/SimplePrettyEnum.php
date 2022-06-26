@@ -2,7 +2,7 @@
 
 namespace App\Utils\Enums;
 
-enum SimplePrettyEnum: string {
+enum SimplePrettyEnum:string implements EnumInterface {
     case European_UNION = "eu";
     case Other_String = "OS";
 
@@ -13,8 +13,6 @@ enum SimplePrettyEnum: string {
          */
         $cases = self::cases();
         
-//        var_dump($cases);
-//        die();
 
         $prettyCases = [];
         foreach($cases as $enum) {
